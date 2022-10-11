@@ -1,0 +1,46 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.Moon{
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.sphere{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1rem;
+  
+  /* background-image: radial-gradient(ellipse 50% 50% at 70% 40%, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0)); */
+}
+.sphere1{
+  background-color: #666666;
+  clip-path: inset(0 50% 0 0);;
+}
+.sphere2{
+  background-color: #e8e8e8;
+  clip-path: inset(0 0 0 50%);;
+}
+.highlight{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.highlight1 {
+  background-color: #e8e8e8;
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+.highlight2 {
+  background-color: #666666;
+  clip-path: ellipse(0% 50% at 50% 50%);
+}
