@@ -44,7 +44,7 @@ function getPhaseFromDate(yr: number, mh: number, dy: number) {
 
 
   let phai = phase * 2 * Math.PI;
-  console.log(`${yr},${mh},${dy}`, phase, phai);
+  // console.log(`${yr},${mh},${dy}`, phase, phai);
   return phase;
 }
 
