@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { getPhaseFromDate } from "./calc"
 import { calcStyleFromPh } from "./calcfromPh"
+import DataSelect from './DateSelect'
 let testph = 0.6;
 let today = new Date();
 function App() {
@@ -45,6 +46,7 @@ function App() {
   return (
     <div className="App">
       {today.toLocaleDateString()}
+      <DataSelect ></DataSelect>
       <div className="Moon">
 
         <div className='sphere1 sphere'
