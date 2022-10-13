@@ -39,7 +39,7 @@ function App() {
       setH1Back(h1color);
       setH2Back(h2color);
 
-    }, 3000);
+    }, 1000);
     return () => clearInterval(interval);
   })
 
