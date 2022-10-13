@@ -5,11 +5,11 @@ function DataSelect() {
 
   return (
     <div>
-        <input
+        {/* <input
             type="date"
             value={date.toLocaleDateString()}
             onChange={(e) => setDate(new Date(e.target.value))}
-        />
+        /> */}
     </div>
     );
 }
