@@ -15,7 +15,7 @@
   /* background-image: radial-gradient(ellipse 50% 50% at 70% 40%, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0)); */
 }
 .sphere1{
-  background-color: #666666;
+  background-color: #303030;
   clip-path: inset(0 0% 0 0);
 }
 .sphere2{
@@ -46,6 +46,6 @@
 }
 
 .highlight2 {
-  background-color: #666666;
+  background-color: #303030;
   clip-path: ellipse(0% 50% at 50% 50%);
 }

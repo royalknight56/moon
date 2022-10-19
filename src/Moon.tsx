@@ -29,11 +29,11 @@ function Moon(prop: {
   return (<div className="Moon">
 
     <div className='sphere1 sphere'
-      style={{ backgroundColor: h1backcolor ? '#666666' : '#e8e8e8' }}>
+      style={{ backgroundColor: h1backcolor ? '#303030' : '#e8e8e8' }}>
       <div className='highlight highlight1'
         style={{
           clipPath: `ellipse(${h1clip}% 50% at 50% 50%)`,
-          backgroundColor: h1backcolor ? '#e8e8e8' : '#666666'
+          backgroundColor: h1backcolor ? '#e8e8e8' : '#303030'
         }}
       >
 
@@ -41,11 +41,11 @@ function Moon(prop: {
     </div>
     <div className='sp2outer'>
       <div className='sphere2 sphere'
-        style={{ backgroundColor: h2backcolor ? '#e8e8e8' : '#666666' }}>
+        style={{ backgroundColor: h2backcolor ? '#e8e8e8' : '#303030' }}>
         <div className='highlight highlight2'
           style={{
             clipPath: `ellipse(${h2clip}% 50% at 50% 50%)`,
-            backgroundColor: h2backcolor ? '#666666' : '#e8e8e8'
+            backgroundColor: h2backcolor ? '#303030' : '#e8e8e8'
           }}
         >
         </div>

@@ -3,4 +3,13 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: #FFF;
+}
+body{
+  background-color: #172740;
+}
+.thmoon{
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
 }
