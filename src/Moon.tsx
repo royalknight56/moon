@@ -13,27 +13,35 @@ function Moon(prop: {
   const [h2clip, setH2clip] = useState(0);
   const [h1backcolor, setH1Back] = useState(true);
   const [h2backcolor, setH2Back] = useState(false);
-
+  const [rad, setrad] = useState(0);
+  const darkColor = '#00121f';
+  const lightColor = '#e6f1f9';
   useEffect(() => {
 
     let yr = prop.date.ya;
     let mh = prop.date.ma;
     let dy = prop.date.da;
+    
     let phase = getPhaseFromDate(yr, mh, dy);
-    let [h1c, h2c, h1color, h2color] = calcStyleFromPh(phase);
+    let [h1c, h2c, h1color, h2color,radt] = calcStyleFromPh(phase);
     setH1clip(h1c);
     setH2clip(h2c);
     setH1Back(h1color);
     setH2Back(h2color);
+    setrad(radt);
   })
-  return (<div className="Moon">
+  return (<div className="Moon"
+  style={{
+    boxShadow: `0 0 ${60*rad}px 2px #77bbf6`,
+  }}
+  >
 
     <div className='sphere1 sphere'
-      style={{ backgroundColor: h1backcolor ? '#303030' : '#e8e8e8' }}>
+      style={{ backgroundColor: h1backcolor ? darkColor : lightColor }}>
       <div className='highlight highlight1'
         style={{
           clipPath: `ellipse(${h1clip}% 50% at 50% 50%)`,
-          backgroundColor: h1backcolor ? '#e8e8e8' : '#303030'
+          backgroundColor: h1backcolor ? lightColor : darkColor
         }}
       >
 
@@ -41,11 +49,11 @@ function Moon(prop: {
     </div>
     <div className='sp2outer'>
       <div className='sphere2 sphere'
-        style={{ backgroundColor: h2backcolor ? '#e8e8e8' : '#303030' }}>
+        style={{ backgroundColor: h2backcolor ? lightColor : darkColor }}>
         <div className='highlight highlight2'
           style={{
             clipPath: `ellipse(${h2clip}% 50% at 50% 50%)`,
-            backgroundColor: h2backcolor ? '#303030' : '#e8e8e8'
+            backgroundColor: h2backcolor ? darkColor : lightColor
           }}
         >
         </div>

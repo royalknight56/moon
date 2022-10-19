@@ -16,7 +16,7 @@ function App() {
   // })
   function onDataChange(e: number) {
     let tmp = new Date();
-    tmp.setDate(tmp.getDate() + Math.floor(e / 10));
+    tmp.setDate(tmp.getDate() + Math.floor(e / 5));
     // console.log(tmp.getDate())
     setToday(tmp);
   }

@@ -3,16 +3,21 @@ import "./DataCss.css";
 function DataSelect(props:{
     onChange?: (e: any) => void;
 }) {
-    const [x, setX] = useState(0);
+    const [x, setX] = useState(200);
     let handleref  = createRef<HTMLDivElement>();
     const startDrag: MouseEventHandler<HTMLDivElement> = (e) => {
         let startX = handleref.current?.offsetLeft;
         let mouseStartX = e.pageX;
         let mouseMove = (e: MouseEvent) => {
             let moveX = e.pageX - mouseStartX;
-            let pos = startX!-5 + moveX
+            let pos = startX! + moveX;
+            if (pos < 0) {
+                pos = 0;
+            }else if (pos > 400-10) {
+                pos = 400-10;
+            }
             setX(pos);
-            props.onChange?.(pos);
+            props.onChange?.(pos-200);
         }
         document.addEventListener("mousemove", mouseMove);
         document.addEventListener("mouseup", () => {

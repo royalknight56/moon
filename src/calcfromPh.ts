@@ -3,7 +3,7 @@
  * @LastEditTime: 2022-10-13 13:39:23
  * @Description: 
  */
-function calcStyleFromPh(ph: number): [number, number, boolean, boolean] {
+function calcStyleFromPh(ph: number): [number, number, boolean, boolean,number] {
   // 0 全黑
   // 0.25 左黑右白
   // 0.5 全白
@@ -19,18 +19,18 @@ function calcStyleFromPh(ph: number): [number, number, boolean, boolean] {
   let rad = Math.abs(Math.cos(ac)/2) * 100;
   if (ph >= 0 && ph < 0.25) {
     h2c = (0.25 - ph) * 4 * 50;
-    return [0, rad, true, true]
+    return [0, rad, true, true,ph *2]
   } else if (ph >= 0.25 && ph < 0.5) {
     h1c = (ph - 0.25) * 4 * 50;
-    return [rad, 0, true, true]
+    return [rad, 0, true, true,ph *2 ]
   } else if (ph >= 0.5 && ph < 0.75) {
     h2c = (0.75 - ph) * 4 * 50;
-    return [50, rad, true, false]
+    return [50, rad, true, false, (1 - ph) * 2 ]
   } else if (ph >= 0.75 && ph <= 1) {
     h1c = (ph - 0.75) * 4 * 50;
-    return [rad, 50, false, true]
+    return [rad, 50, false, true,(1 - ph) * 2]
   }
-  return [0, 0, false, false]
+  return [0, 0, false, false,ph]
 }
 export {
   calcStyleFromPh
