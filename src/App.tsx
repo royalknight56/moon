@@ -20,6 +20,9 @@ function App() {
     // console.log(tmp.getDate())
     setToday(tmp);
   }
+  function jumpto(){
+    location.href = "http://myim.online/"
+  }
   return (
     <div className="App">
       {today.toLocaleDateString()}
@@ -34,7 +37,8 @@ function App() {
           }}
         ></Moon>
       </div>
-
+      <div onClick={jumpto} className='linkto'>?
+      <span className='helptext'>日期下方有可以拖动的时间选择器哦</span></div>
     </div>
   )
 }
