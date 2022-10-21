@@ -1,17 +1,21 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   color: #FFF;
+  width: 100vw;
+  /* height: 100vh; */
+  padding-top: 6vh;
+  padding-bottom: 10vh;
+  overflow: hidden;
 }
 body{
   background-color: #172740;
-  width: max-content;
   height: max-content;
 }
 .thmoon{
-  width: 100px;
+  width: min-content;
   position: relative;
   margin: 0 auto;
   padding-top: 100px;

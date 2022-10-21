@@ -36,8 +36,8 @@ function Moon(prop: {
     <div
       className="outermoon"
       style={{
-        // transform: `rotateZ(${rad*6}deg) scale(${1+rad*0.07})`
-        transform: `scale(${0.90 + rad * 0.03})`
+        transform: `rotateZ(${rad*7-3}deg) scale(${0.90 + rad * 0.03})`
+        // transform: `scale(${0.90 + rad * 0.03})`
         // 纬度天平动 ±6 º 41' 经度天平动 ±7 º 45'
       }}
     >
