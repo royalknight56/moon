@@ -1,4 +1,4 @@
-import { useState, MouseEventHandler, createRef } from "react";
+import { useState, MouseEventHandler,TouchEventHandler, createRef } from "react";
 import "./DataCss.css";
 function DataSelect(props:{
     onChange?: (e: any) => void;
@@ -24,6 +24,28 @@ function DataSelect(props:{
             document.removeEventListener("mousemove", mouseMove);
         })
     }
+    const startTouch: TouchEventHandler<HTMLDivElement> = (e) => {
+        e.preventDefault();
+        let startX = handleref.current?.offsetLeft;
+        let touchStartX = e.touches[0].pageX;
+        let touchMove = (e: TouchEvent) => {
+            let moveX = e.touches[0].pageX - touchStartX;
+            let pos = startX! + moveX;
+            if (pos < 0) {
+                pos = 0;
+            }else if (pos > 400-10) {
+                pos = 400-10;
+            }
+            setX(pos);
+            props.onChange?.(pos-200);
+        }
+        document.addEventListener("touchmove", touchMove);
+        document.addEventListener("touchend", () => {
+            document.removeEventListener("touchmove", touchMove);
+        })
+    }
+
+
     return (
         <div>
             {/* <input
@@ -34,7 +56,9 @@ function DataSelect(props:{
             <div className="bar">
                 <div
                 ref={handleref}
-                 onMouseDown={startDrag} className="handle"
+                 onMouseDown={startDrag}
+                 onTouchStart={startTouch}
+                  className="handle"
                     style={{ left: x }}></div>
             </div>
         </div>

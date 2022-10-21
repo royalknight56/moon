@@ -7,6 +7,8 @@
 }
 body{
   background-color: #172740;
+  width: max-content;
+  height: max-content;
 }
 .thmoon{
   width: 100px;
