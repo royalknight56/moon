@@ -11,14 +11,11 @@
     width: 400px;
     margin: 5px 0px;
     /* border: 1px solid #000000; */
-    opacity: 0;
     transition: opacity 0.3s 0.1s;
-}
-.bar:hover{
-    opacity: 1;
 }
 .handle{
     user-select: none;
+    cursor: pointer;
     position: relative;
     background-color: #59abfc;
     color: #ffffff;

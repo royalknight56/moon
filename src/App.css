@@ -33,6 +33,16 @@ body{
 .linkto:hover .helptext{
   opacity: 1;
 }
+.dataselect{
+  opacity: 0;
+  transition: all 0.2s;
+}
+.dataselect:hover{
+  opacity: 1;
+}
+.linkto:hover~.dataselect{
+  opacity: 1;
+}
 @keyframes linkanim {
   0%,100% {
     opacity: 0;

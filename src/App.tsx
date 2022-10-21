@@ -26,7 +26,9 @@ function App() {
   return (
     <div className="App">
       {today.toLocaleDateString()}
+      <div className='dataselect'>
       <DataSelect onChange={onDataChange}></DataSelect>
+      </div>
       <div className="thmoon">
         <Moon
 
@@ -37,8 +39,8 @@ function App() {
           }}
         ></Moon>
       </div>
-      <div onClick={jumpto} className='linkto'>?
-      <span className='helptext'>日期下方有可以拖动的时间选择器哦</span></div>
+      <div className='linkto'>?
+      <span className='helptext'>日期下方有可以拖动的时间选择器哦 <span onClick={jumpto}>跳转到主页</span></span></div>
     </div>
   )
 }
